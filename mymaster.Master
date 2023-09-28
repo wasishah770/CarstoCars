@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mymaster.master.cs" Inherits="carstocars.mymaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Master Page</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.bundle.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <div>
+                <nav class="navbar navbar-expand-md" style="background-color: #7d5ba6;">
+        <div class="container-fluid">
+            <img src="images\Website_Logo_7_120x50.png" style="border-radius: 8px;" alt="..."/>
+            <a class="navbar-brand" style="padding: 0px 14px;" href="home.aspx">Cars to Cars</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.aspx">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.aspx">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.aspx">Support</a>
+                    </li>
+                </ul>
+                <ul class ="d-flex align-items-end list-unstyled me-auto mb-2 mb-md-0">
+                    <li>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        style="background-color: white;"/>
+                    </li>
+                    <li style ="padding: 0 0 0 4px;">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </li>
+                    </ul>
+                <div class="mx-2">
+                    <button class="btn btn-danger"><a class="nav-link active" aria-current="page" href="login.aspx">Login</a></button>
+                    <button class="btn btn-danger"><a class="nav-link active" aria-current="page" href="signup.aspx">SignUp</a></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+            </div>
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer class="container">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>&copy All Rights Reserved by By carstocars.com</p>
+        </footer>
+    </form>
+</body>
+</html>
